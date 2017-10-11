@@ -1,0 +1,16 @@
+{
+  "name": "sheetify-inline",
+  "version": "1.0.0",
+  "description": "a plugin converts img to base64 for sheetify",
+  "main": "index.js",
+  "repository": "https://github.com/ZhouHansen/sheetify-inline",
+  "author": "zhouhansen",
+  "license": "MIT",
+  "dependencies": {
+    "base64-img": "^1.0.3",
+    "css-url-rewriter": "^0.1.3"
+  },
+  "devDependencies": {
+    "tape": "^4.8.0"
+  }
+}
