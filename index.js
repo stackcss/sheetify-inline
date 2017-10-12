@@ -5,8 +5,10 @@ module.exports = transform
 
 function transform (filename, source, options, done){
   try {
-    cssurl(source, url=>{
-      return base64Img.base64Sync(url)
+    cssurl(source, (url, done2)=>{
+      base64Img.base64(url, (err, data)=>{
+        done2(data)
+      })
     }, source=>{
       done(null, source)
     })
