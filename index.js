@@ -5,11 +5,16 @@ module.exports = transform
 
 function transform (filename, source, options, done){
   try {
-    cssurl(source, (url, done2)=>{
-      base64Img.base64(url, (err, data)=>{
+    cssurl(source, (url, done2) => {
+      base64Img.base64(url, (err, data) => {
+        if (data === void 0){
+          done2(url)
+          return
+        }
+
         done2(data)
       })
-    }, source=>{
+    }, source => {
       done(null, source)
     })
   } catch (e) {
