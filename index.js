@@ -9,20 +9,28 @@ function transform (filename, source, options, done){
       done(null, source)
       return
     }
-    
-    cssurl(source, (url, done2) => {
-      base64Img.base64(url, (err, data) => {
-        if (data === void 0){
-          done2(url)
-          return
-        }
 
-        done2(data)
-      })
-    }, source => {
+    cssurl(source, getBase64, source => {
       done(null, source)
     })
+
   } catch (e) {
     return done(e)
   }
+}
+
+function getBase64 (url){
+  return new Promise((resolve, reject) => {
+
+    base64Img.base64(url, (err, data) => {
+      var oldUrl = url
+      var newUrl = data
+
+      if (data === void 0){
+        newUrl = url
+      }
+
+      resolve({oldUrl, newUrl})
+    })
+  })
 }
