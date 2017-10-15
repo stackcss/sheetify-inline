@@ -5,6 +5,11 @@ module.exports = transform
 
 function transform (filename, source, options, done){
   try {
+    if (/\/node_modules\//.test(filename)){
+      done(null, source)
+      return
+    }
+    
     cssurl(source, (url, done2) => {
       base64Img.base64(url, (err, data) => {
         if (data === void 0){
