@@ -22,13 +22,13 @@ div{
 }
 
 ```
-## install
+## Install
 
 `npm install sheetify-inline`
 
-## test
+## Test
 
-`npm run test`
+`npm test`
 
 ## Command line
 ```sh
