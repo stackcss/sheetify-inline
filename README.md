@@ -22,9 +22,6 @@ div{
 }
 
 ```
-## Install
-
-`npm install sheetify-inline`
 
 ## Test
 
