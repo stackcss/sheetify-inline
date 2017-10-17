@@ -21,16 +21,12 @@ function transform (filename, source, options, done){
 
 function getBase64 (url){
   return new Promise((resolve, reject) => {
-
     base64Img.base64(url, (err, data) => {
-      var oldUrl = url
-      var newUrl = data
-
       if (data === void 0){
-        newUrl = url
+        resolve(url)
       }
 
-      resolve({oldUrl, newUrl})
+      resolve(data)
     })
   })
 }
