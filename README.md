@@ -55,4 +55,4 @@ $ npm install sheetify-inline
 [3]: https://npmjs.org/package/sheetify-inline
 [4]: http://img.shields.io/npm/dm/sheetify-inline.svg?style=flat-square
 [5]: https://npmjs.org/package/sheetify-inline
-[6]: https://travis-ci.org/ZhouHansen/sheetify-inline.svg?branch=master
+[6]: https://travis-ci.org/stackcss/sheetify-inline.svg?branch=master
