@@ -1,15 +1,15 @@
 import base64Img from 'base64-img'
 import cssReurl from 'css-reurl'
 
-export default (filename, source, options, done) => {
+export default (filename, src, options, done) => {
   try {
     if (/\/node_modules\//.test(filename)){
-      done(null, source)
+      done(null, src)
       return
     }
 
-    cssReurl(source, getBase64, source => {
-      done(null, source)
+    cssReurl(src, getBase64, src => {
+      done(null, src)
     })
 
   } catch (e) {
@@ -23,7 +23,6 @@ function getBase64 (url){
       if (data === void 0){
         resolve(url)
       }
-
       resolve(data)
     })
   })

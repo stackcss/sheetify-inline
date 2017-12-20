@@ -14,15 +14,15 @@ var _cssReurl2 = _interopRequireDefault(_cssReurl);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function (filename, source, options, done) {
+exports.default = function (filename, src, options, done) {
   try {
     if (/\/node_modules\//.test(filename)) {
-      done(null, source);
+      done(null, src);
       return;
     }
 
-    (0, _cssReurl2.default)(source, getBase64, function (source) {
-      done(null, source);
+    (0, _cssReurl2.default)(src, getBase64, function (src) {
+      done(null, src);
     });
   } catch (e) {
     return done(e);
@@ -35,7 +35,6 @@ function getBase64(url) {
       if (data === void 0) {
         resolve(url);
       }
-
       resolve(data);
     });
   });
