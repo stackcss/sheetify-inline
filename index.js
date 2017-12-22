@@ -1,14 +1,16 @@
-import base64Img from 'base64-img'
-import cssReurl from 'css-reurl'
+var base64Img = require('base64-img')
+var cssurl = require('css-reurl')
 
-export default (filename, src, options, done) => {
+module.exports = transform
+
+function transform (filename, src, options, done){
   try {
     if (/\/node_modules\//.test(filename)){
       done(null, src)
       return
     }
 
-    cssReurl(src, getBase64, src => {
+    cssurl(src, getBase64, src => {
       done(null, src)
     })
 
