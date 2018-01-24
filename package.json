@@ -1,6 +1,6 @@
 {
   "name": "sheetify-inline",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "scripts":{
     "test": "tape test.js"
   },
@@ -11,6 +11,6 @@
   "license": "MIT",
   "dependencies": {
     "base64-img": "^1.0.3",
-    "css-reurl": "^2.0.0"
+    "css-reurl": "^2.0.4"
   }
 }
