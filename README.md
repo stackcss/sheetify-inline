@@ -4,6 +4,8 @@
 
 Plugin transforms img to base64 for sheetify
 
+works with async functions (node 7.6+)
+
 ## Example
 
 before:
