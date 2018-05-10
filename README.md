@@ -31,7 +31,7 @@ div{
 
 ## Command line
 ```sh
-$ browserify entry.js -t [ sheetify/transform -u sheetify-inline ]
+$ browserify entry.js -t [ sheetify/transform -t sheetify-inline ]
 ```
 
 ## JS api
@@ -39,7 +39,7 @@ $ browserify entry.js -t [ sheetify/transform -u sheetify-inline ]
 const browserify = require('browserify')
 
 browserify()
- .transform('sheetify/transform', { use: [ 'sheetify-inline' ] })
+ .transform('sheetify/transform', { transform: [ 'sheetify-inline' ] })
  .bundle()
 ```
 
